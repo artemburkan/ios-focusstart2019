@@ -17,6 +17,7 @@ class CarListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Navigation
+        self.title = "Каталог автомобилей"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Добавить", style: UIBarButtonItem.Style.plain, target: self, action: #selector(createCar))
         
         // Table
@@ -25,7 +26,7 @@ class CarListViewController: UIViewController {
         tableView.snp.makeConstraints {
             $0.top.leading.trailing.bottom.equalToSuperview()
         }
-        tableView.backgroundColor = UIColor.red
+        // tableView.backgroundColor = UIColor.red
         tableView.dataSource = self
         tableView.delegate = self
     }
